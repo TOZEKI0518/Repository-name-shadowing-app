@@ -15,24 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "English Shadowing",
   description: "Shadowing App",
-  manifest: "/manifest.json",
-
-  // 👇 これ追加（PWAで重要）
-  themeColor: "#0ea5e9",
-
-  // 👇 iPhone対応
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Shadowing",
-  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="ja"
