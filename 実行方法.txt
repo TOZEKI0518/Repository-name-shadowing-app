@@ -1,0 +1,4 @@
+PowerShellで以下を順番に実行
+cd C:\Users\81805\shadowing-app
+npm run dev
+http://localhost:3000
