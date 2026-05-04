@@ -24,3 +24,10 @@ Deploy を押す
 
 https://repository-name-shadowing
 
+
+
+更新は以下をPowerShellにはる。
+git add .
+git commit -m "add first tutorial"
+git push
+

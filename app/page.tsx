@@ -3,6 +3,21 @@
 import { useEffect, useRef, useState } from "react";
 import { lessons } from "../data/lessons";
 
+const tutorialSteps = [
+  {
+    title: "まずは音声を聞こう",
+    text: "下の ▶ ボタンを押すと、今の英文を読み上げます。",
+  },
+  {
+    title: "英文と日本語を表示しよう",
+    text: "English / Japanese の Show・表示ボタンで内容を確認できます。",
+  },
+  {
+    title: "連続再生で10分練習",
+    text: "連続ボタンを押すと、1レッスンを自動で練習できます。完了するとストリークが記録されます。",
+  },
+];
+
 export default function Home() {
   const [lessonIndex, setLessonIndex] = useState(0);
   const [index, setIndex] = useState(0);
@@ -16,6 +31,9 @@ export default function Home() {
 
   const [streak, setStreak] = useState(0);
   const [lastStudyDate, setLastStudyDate] = useState<string | null>(null);
+
+  const [showTutorial, setShowTutorial] = useState(false);
+  const [tutorialStep, setTutorialStep] = useState(0);
 
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -32,6 +50,8 @@ export default function Home() {
     const savedRepeatCount = localStorage.getItem("repeatCount");
     const savedShowEnglish = localStorage.getItem("showEnglish");
     const savedShowJapanese = localStorage.getItem("showJapanese");
+
+    const tutorialSeen = localStorage.getItem("tutorialSeen");
 
     if (savedStreak) setStreak(Number(savedStreak));
     if (savedDate) setLastStudyDate(savedDate);
@@ -54,6 +74,10 @@ export default function Home() {
     if (savedRepeatCount) setRepeatCount(Number(savedRepeatCount));
     if (savedShowEnglish) setShowEnglish(savedShowEnglish === "true");
     if (savedShowJapanese) setShowJapanese(savedShowJapanese === "true");
+
+    if (!tutorialSeen) {
+      setShowTutorial(true);
+    }
   }, []);
 
   useEffect(() => {
@@ -233,8 +257,15 @@ export default function Home() {
     localStorage.removeItem("showJapanese");
   };
 
+  const finishTutorial = () => {
+    localStorage.setItem("tutorialSeen", "true");
+    setShowTutorial(false);
+    setTutorialStep(0);
+  };
+
   const progress = Math.round(((index + 1) / lesson.sentences.length) * 100);
   const todayDone = lastStudyDate === getToday();
+  const tutorial = tutorialSteps[tutorialStep];
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-emerald-50 text-gray-800">
@@ -465,6 +496,57 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {showTutorial && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+          <div className="w-full max-w-sm rounded-3xl bg-white p-6 text-center shadow-2xl">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-2xl">
+              🎧
+            </div>
+
+            <p className="mb-2 text-xs font-bold text-sky-500">
+              STEP {tutorialStep + 1} / {tutorialSteps.length}
+            </p>
+
+            <h2 className="mb-3 text-2xl font-black">{tutorial.title}</h2>
+
+            <p className="mb-5 text-sm leading-relaxed text-gray-600">
+              {tutorial.text}
+            </p>
+
+            <div className="mb-5 flex justify-center gap-2">
+              {tutorialSteps.map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-2 w-2 rounded-full ${
+                    tutorialStep === i ? "bg-sky-500" : "bg-gray-200"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              className="mb-3 w-full rounded-2xl bg-sky-500 py-3 font-bold text-white shadow-lg"
+              onClick={() => {
+                if (tutorialStep < tutorialSteps.length - 1) {
+                  setTutorialStep((prev) => prev + 1);
+                } else {
+                  finishTutorial();
+                }
+              }}
+            >
+              {tutorialStep < tutorialSteps.length - 1 ? "次へ" : "始める"}
+            </button>
+
+            <button
+              className="text-sm font-semibold text-gray-400"
+              onClick={finishTutorial}
+            >
+              スキップ
+            </button>
+          </div>
+        </div>
+      )}
 
       {showPremium && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
