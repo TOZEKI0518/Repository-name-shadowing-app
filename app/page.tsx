@@ -315,7 +315,7 @@ export default function Home() {
 
           <div className="mb-3 flex gap-2 overflow-x-auto pb-1">
             {lessons.map((item, i) => {
-              const isLocked = i >= 3;
+              const isLocked = i >= 5;
 
               return (
                 <button
