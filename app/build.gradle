@@ -22,7 +22,7 @@ plugins {
 
 def twaManifest = [
     applicationId: 'com.takumaapps.englishshadowing',
-    hostName: 'repository-name-shadowing-app.vercel.app', // The domain being opened in the TWA.
+    hostName: 'english-shadowing-app.vercel.app', // The domain being opened in the TWA.
     launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
     name: 'English Shadowing', // The application name.
     launcherName: 'Shadowing', // The name shown on the Android Launcher.
@@ -57,7 +57,7 @@ android {
         applicationId "com.takumaapps.englishshadowing"
         minSdkVersion 21
         targetSdkVersion 35
-        versionCode 5
+        versionCode 6
         versionName "1.0.1"
 
         // The name for the application
@@ -76,12 +76,12 @@ android {
             // The URL the Web Manifest for the Progressive Web App that the TWA points to. This
             // is used by Chrome OS and Meta Quest to open the Web version of the PWA instead of
             // the TWA, as it will probably give a better user experience for non-mobile devices.
-            resValue "string", "webManifestUrl", 'https://repository-name-shadowing-app.vercel.app/manifest.json'
+            resValue "string", "webManifestUrl", 'https://english-shadowing-app.vercel.app/manifest.json'
         
 
         
             // This is used by Meta Quest.
-            resValue "string", "fullScopeUrl", 'https://repository-name-shadowing-app.vercel.app/'
+            resValue "string", "fullScopeUrl", 'https://english-shadowing-app.vercel.app/'
         
 
         

@@ -1,6 +1,6 @@
 {
   "packageId": "com.takumaapps.englishshadowing",
-  "host": "repository-name-shadowing-app.vercel.app",
+  "host": "english-shadowing-app.vercel.app",
   "name": "English Shadowing",
   "launcherName": "Shadowing",
   "display": "standalone",
@@ -13,7 +13,7 @@
   "backgroundColor": "#FFFFFF",
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://repository-name-shadowing-app.vercel.app/icon.png",
+  "iconUrl": "https://english-shadowing-app.vercel.app/icon.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "C:\\Users\\81805\\shadowing-app\\android.keystore",
@@ -23,7 +23,7 @@
   "appVersionCode": 5,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://repository-name-shadowing-app.vercel.app/manifest.json",
+  "webManifestUrl": "https://english-shadowing-app.vercel.app/manifest.json",
   "fallbackType": "customtabs",
   "features": {},
   "alphaDependencies": {
@@ -32,7 +32,7 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://repository-name-shadowing-app.vercel.app/",
+  "fullScopeUrl": "https://english-shadowing-app.vercel.app/",
   "minSdkVersion": 21,
   "orientation": "default",
   "fingerprints": [],
