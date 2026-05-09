@@ -31,3 +31,15 @@ git add .
 git commit -m "add first tutorial"
 git push
 
+
+Playstoreの鍵（重要）
+C:\Users\81805\shadowing-app\android.keystore
+
+PW:Shadowing2026!
+
+com.takumaapps.englishshadowingが今後のアプリIDになります
+
+https://play.google.com/apps/internaltest/4701418355722955466
+
+
+https://sites.google.com/view/englishshadowing-privacy

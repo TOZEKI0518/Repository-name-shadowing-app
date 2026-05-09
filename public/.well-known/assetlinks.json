@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.takumaapps.englishshadowing",
+      "sha256_cert_fingerprints": [
+        "1D:F0:F0:B9:B2:08:21:D4:20:54:FB:0F:95:1A:BD:ED:E4:FB:DF:91:A3:F8:43:EB:11:5E:11:A2:29:F0:ED:3D"
+      ]
+    }
+  }
+]
