@@ -158,15 +158,6 @@ export default function Home() {
   }, [lessonIndex, index, speed, repeatCount, showEnglish, showJapanese]);
 
   useEffect(() => {
-    if (screen === "study") {
-      cardRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
-  }, [index, lessonIndex, screen]);
-
-  useEffect(() => {
     if (!lesson) return;
     if (index > lesson.sentences.length - 1) {
       setIndex(0);
