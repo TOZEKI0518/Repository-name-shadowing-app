@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { lessons } from "../../data";
 
 type Screen = "home" | "study";
@@ -82,7 +82,7 @@ const tutorialSteps = [
 ];
 
 export default function Home() {
-  const [screen, setScreen] = useState<Screen>("study");
+  const [screen, setScreen] = useState<Screen>("home");
   const [lessonIndex, setLessonIndex] = useState(0);
   const [index, setIndex] = useState(0);
   const [speed, setSpeed] = useState(1);
@@ -101,8 +101,6 @@ export default function Home() {
   const [tutorialStep, setTutorialStep] = useState(0);
 
   const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const cardRef = useRef<HTMLDivElement>(null);
 
   const categoryList = useMemo(() => {
     return ["All", ...categoryOrder];
@@ -459,36 +457,26 @@ export default function Home() {
 
       {screen === "study" && (
         <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-4 pb-36 pt-5">
-          <header className="mb-5">
-            <div className="mb-3">
+          <header className="mb-3">
+            <div className="mb-2">
               <button
                 onClick={() => setScreen("home")}
-                className="mb-3 inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-black text-sky-600 shadow-md"
+                className="mb-2 inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-black text-sky-600 shadow-md"
               >
                 <span className="text-xl">‹</span>
                 レッスン一覧
               </button>
 
-              <p className="text-sm font-semibold text-sky-500">
-                English Shadowing
-              </p>
               <h1 className="text-3xl font-black tracking-tight text-gray-900">
                 {lesson.title}
               </h1>
-              <p className="mt-1 text-sm font-bold text-gray-400">
-                {categoryLabels[lesson.category] || lesson.category} ・{" "}
-                {lesson.duration}
-              </p>
             </div>
 
-            <div className="mb-3 rounded-3xl bg-white p-4 shadow-md">
+            <div className="mb-2 rounded-3xl bg-white px-5 py-3 shadow-md">
               <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-bold text-gray-400">Streak</p>
-                  <p className="mt-1 text-xl font-black text-orange-500">
-                    🔥 {streak} 日連続
-                  </p>
-                </div>
+                <p className="text-xl font-black text-orange-500">
+                  🔥 {streak} 日連続
+                </p>
 
                 <div
                   className={`rounded-full px-4 py-2 text-sm font-black ${
@@ -504,28 +492,23 @@ export default function Home() {
 
             <button
               onClick={() => setShowLessonModal(true)}
-              className="mb-3 flex w-full items-center justify-between rounded-3xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-4 text-left text-white shadow-lg transition active:scale-[0.98]"
+              className="mb-2 flex w-full items-center justify-between rounded-3xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-3 text-left text-white shadow-lg transition active:scale-[0.98]"
             >
-              <div className="flex items-center gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 text-3xl backdrop-blur">
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 text-3xl backdrop-blur">
                   📖
                 </div>
 
-                <div>
-                  <p className="text-2xl font-black">レッスンを変更</p>
-                  <p className="mt-1 text-sm font-bold text-white/80">
-                    別のレッスンを選びます
-                  </p>
-                </div>
+                <p className="text-2xl font-black">レッスンを変更</p>
               </div>
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-3xl font-black text-sky-500 shadow-md">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-2xl font-black text-sky-500 shadow-md">
                 ›
               </div>
             </button>
 
             <div className="rounded-3xl bg-white p-4 shadow-md">
-              <div className="mb-3 flex justify-between text-sm font-bold text-gray-400">
+              <div className="mb-2 flex justify-between text-sm font-bold text-gray-400">
                 <span>
                   Sentence {index + 1} / {lesson.sentences.length}
                 </span>
@@ -541,22 +524,22 @@ export default function Home() {
 
             <button
               onClick={resetProgress}
-              className="mt-3 flex w-full items-center justify-center gap-2 rounded-3xl bg-white py-2.5 text-sm font-black text-gray-400 shadow-md"
+              className="mt-2 flex w-full items-center justify-center gap-2 rounded-3xl bg-white py-2 text-sm font-black text-gray-400 shadow-md"
             >
               <span className="text-lg">↻</span>
               進捗をリセット
             </button>
           </header>
 
-          <section ref={cardRef} className="space-y-4">
+          <section className="space-y-3">
             <div
-              className={`rounded-3xl p-5 shadow-lg transition-all ${
+              className={`rounded-3xl p-4 shadow-lg transition-all ${
                 playingIndex === index
                   ? "bg-sky-50 ring-2 ring-sky-400"
                   : "bg-white"
               }`}
             >
-              <div className="mb-4 flex items-center justify-between">
+              <div className="mb-3 flex items-center justify-between">
                 <span className="rounded-full bg-sky-100 px-4 py-2 text-sm font-black text-sky-600">
                   English
                 </span>
@@ -573,20 +556,20 @@ export default function Home() {
                   {current.en}
                 </p>
               ) : (
-                <p className="rounded-2xl bg-gray-50 p-5 text-center text-lg font-bold text-gray-400">
+                <p className="rounded-2xl bg-gray-50 p-4 text-center text-lg font-bold text-gray-400">
                   英文を隠しています
                 </p>
               )}
             </div>
 
             <div
-              className={`rounded-3xl p-5 shadow-lg transition-all ${
+              className={`rounded-3xl p-4 shadow-lg transition-all ${
                 playingIndex === index
                   ? "bg-emerald-50 ring-2 ring-emerald-400"
                   : "bg-white"
               }`}
             >
-              <div className="mb-4 flex items-center justify-between">
+              <div className="mb-3 flex items-center justify-between">
                 <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-black text-emerald-600">
                   Japanese
                 </span>
@@ -603,7 +586,7 @@ export default function Home() {
                   {current.jp}
                 </p>
               ) : (
-                <p className="rounded-2xl bg-gray-50 p-5 text-center text-lg font-bold text-gray-400">
+                <p className="rounded-2xl bg-gray-50 p-4 text-center text-lg font-bold text-gray-400">
                   日本語訳を隠しています
                 </p>
               )}
