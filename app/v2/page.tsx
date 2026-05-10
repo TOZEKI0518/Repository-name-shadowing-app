@@ -481,11 +481,11 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mb-4 rounded-3xl bg-white p-5 shadow-md">
+            <div className="mb-3 rounded-3xl bg-white p-4 shadow-md">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-bold text-gray-400">Streak</p>
-                  <p className="mt-1 text-2xl font-black text-orange-500">
+                  <p className="mt-1 text-xl font-black text-orange-500">
                     🔥 {streak} 日連続
                   </p>
                 </div>
@@ -504,10 +504,10 @@ export default function Home() {
 
             <button
               onClick={() => setShowLessonModal(true)}
-              className="mb-4 flex w-full items-center justify-between rounded-3xl bg-gradient-to-r from-sky-500 to-blue-600 px-5 py-5 text-left text-white shadow-lg transition active:scale-[0.98]"
+              className="mb-3 flex w-full items-center justify-between rounded-3xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-4 text-left text-white shadow-lg transition active:scale-[0.98]"
             >
               <div className="flex items-center gap-4">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 text-4xl backdrop-blur">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 text-3xl backdrop-blur">
                   📖
                 </div>
 
@@ -541,9 +541,9 @@ export default function Home() {
 
             <button
               onClick={resetProgress}
-              className="mt-4 flex w-full items-center justify-center gap-2 rounded-3xl bg-white py-3 text-sm font-black text-gray-400 shadow-md"
+              className="mt-3 flex w-full items-center justify-center gap-2 rounded-3xl bg-white py-2.5 text-sm font-black text-gray-400 shadow-md"
             >
-              <span className="text-xl">↻</span>
+              <span className="text-lg">↻</span>
               進捗をリセット
             </button>
           </header>
