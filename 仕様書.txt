@@ -1,0 +1,191 @@
+はい、できます。
+まずは下記を `仕様書.md` などの名前で保存しておくのがおすすめです。
+
+````md
+# 英語シャドーイングアプリ 仕様書
+
+## 1. アプリ概要
+
+アプリ名：英語シャドーイング  
+目的：英語音声を聞き、英文・日本語訳を確認しながらシャドーイング練習を行うアプリ。
+
+## 2. 技術構成
+
+- Next.js
+- Tailwind CSS
+- Vercel
+- Bubblewrap
+- TWA
+- Google Play Console
+- Android App Bundle（AAB）
+
+## 3. 重要URL
+
+WebアプリURL：
+
+https://repository-name-shadowing-app.vercel.app/
+
+Manifest：
+
+https://repository-name-shadowing-app.vercel.app/manifest.json
+
+Asset Links：
+
+https://repository-name-shadowing-app.vercel.app/.well-known/assetlinks.json
+
+Icon：
+
+https://repository-name-shadowing-app.vercel.app/icon.png
+
+## 4. 現在の主要フォルダ構成
+
+```text
+shadowing-app
+├ app
+│  ├ page.tsx
+│  ├ layout.tsx
+│  └ globals.css
+├ data
+│  └ lessons.ts
+├ public
+│  ├ icon.png
+│  ├ manifest.json
+│  └ .well-known
+│     └ assetlinks.json
+├ next.config.ts
+├ tailwind.config.ts
+├ postcss.config.mjs
+├ twa-manifest.json
+├ package.json
+└ android.keystore
+````
+
+## 5. 使用しないフォルダ
+
+```text
+app/src
+```
+
+これは旧構成の残骸。
+今後は編集しない。
+
+## 6. 重要ファイル
+
+### app/page.tsx
+
+アプリ本体のUI。
+
+### app/layout.tsx
+
+CSS読み込みに必要。
+
+```tsx
+import "./globals.css";
+```
+
+が必須。
+
+### app/globals.css
+
+Tailwind読み込み用。
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### data/lessons.ts
+
+レッスンデータ。
+
+### twa-manifest.json
+
+Bubblewrap / TWA用設定ファイル。
+
+現在のhost：
+
+```json
+"host": "repository-name-shadowing-app.vercel.app"
+```
+
+## 7. ローカル起動
+
+```bash
+npm run dev
+```
+
+表示URL：
+
+```text
+http://localhost:3000
+```
+
+## 8. ビルド確認
+
+```bash
+npm run build
+```
+
+成功時は以下が出る。
+
+```text
+Route (app)
+○ /
+```
+
+## 9. Vercel反映
+
+```bash
+git add .
+git commit -m "update app"
+git push
+```
+
+GitHub連携によりVercelへ自動反映。
+
+確認URL：
+
+```text
+https://repository-name-shadowing-app.vercel.app/
+```
+
+## 10. Android AAB作成
+
+```bash
+bubblewrap update
+bubblewrap build
+```
+
+生成されるファイル：
+
+```text
+app-release-bundle.aab
+```
+
+Google Play ConsoleにはAPKではなくAABをアップロードする。
+
+## 11. 注意点
+
+* `app/page.tsx` を編集する
+* `app/src` は使わない
+* `global.css` ではなく `globals.css`
+* `postcss.config.js` と `postcss.config.mjs` を両方置かない
+* 残すのは `postcss.config.mjs`
+* `icon.png` は `public/icon.png`
+* TWAのhostとVercel URLを一致させる
+* 404になったらまず `/` が表示されるか確認する
+* UIが崩れたらTailwind設定を確認する
+
+## 12. 現在の状態
+
+* Webアプリ表示：OK
+* UI表示：OK
+* Vercel反映：OK
+* 404問題：解消
+* 次回作業前にフォルダバックアップ推奨
+
+```
+
+これを保存しておけば、次回かなり復旧しやすいです。
+```
