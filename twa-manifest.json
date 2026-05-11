@@ -12,7 +12,7 @@
   "navigationDividerColorDark": "#000000",
   "backgroundColor": "#FFFFFF",
   "enableNotifications": true,
-  "startUrl": "/",
+  "startUrl": "/v2",
   "iconUrl": "https://repository-name-shadowing-app.vercel.app/icon.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
@@ -20,7 +20,7 @@
     "alias": "android"
   },
   "appVersionName": "1.0.1",
-  "appVersionCode": 7,
+  "appVersionCode": 8,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
   "webManifestUrl": "https://repository-name-shadowing-app.vercel.app/manifest.json",

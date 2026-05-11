@@ -1,5 +1,5 @@
 import { dailyConversationLessons } from "./dailyConversation";
-
+import { familyLessons } from "./family";
 import { businessLessons } from "./business";
 import { toeicLessons } from "./toeic";
 import { travelLessons } from "./travel";
@@ -16,7 +16,7 @@ import { directionsLessons } from "./directions";
 
 export const lessons = [
   ...dailyConversationLessons,
-
+  ...familyLessons,
   ...businessLessons,
   ...toeicLessons,
   ...travelLessons,

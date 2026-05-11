@@ -23,7 +23,7 @@ plugins {
 def twaManifest = [
     applicationId: 'com.takumaapps.englishshadowing',
     hostName: 'repository-name-shadowing-app.vercel.app', // The domain being opened in the TWA.
-    launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
+    launchUrl: '/v2', // The start path for the TWA. Must be relative to the domain.
     name: 'English Shadowing', // The application name.
     launcherName: 'Shadowing', // The name shown on the Android Launcher.
     themeColor: '#0EA5E9', // The color used for the status bar.
@@ -57,7 +57,7 @@ android {
         applicationId "com.takumaapps.englishshadowing"
         minSdkVersion 21
         targetSdkVersion 35
-        versionCode 7
+        versionCode 8
         versionName "1.0.1"
 
         // The name for the application
