@@ -31,6 +31,9 @@ git add .
 git commit -m "add first tutorial"
 git push
 
+AAB生成
+bubblewrap build
+
 
 Playstoreの鍵（重要）
 C:\Users\81805\shadowing-app\android.keystore

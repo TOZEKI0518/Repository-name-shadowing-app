@@ -22,10 +22,10 @@ plugins {
 
 def twaManifest = [
     applicationId: 'com.takumaapps.englishshadowing',
-    hostName: 'repository-name-shadowing-app.vercel.app', // The domain being opened in the TWA.
-    launchUrl: '/v2', // The start path for the TWA. Must be relative to the domain.
-    name: 'English Shadowing', // The application name.
-    launcherName: 'Shadowing', // The name shown on the Android Launcher.
+    hostName: 'english-shadowing-app.vercel.app', // The domain being opened in the TWA.
+    launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
+    name: '英語シャドーイング', // The application name.
+    launcherName: '英語シャドーイング', // The name shown on the Android Launcher.
     themeColor: '#0EA5E9', // The color used for the status bar.
     themeColorDark: '#000000', // The color used for the dark status bar.
     navigationColor: '#000000', // The color used for the navigation bar.
@@ -33,7 +33,7 @@ def twaManifest = [
     navigationDividerColor: '#000000', // The navbar divider color.
     navigationDividerColorDark: '#000000', // The dark navbar divider color.
     backgroundColor: '#FFFFFF', // The color used for the splash screen background.
-    enableNotifications: true, // Set to true to enable notification delegation.
+    enableNotifications: false, // Set to true to enable notification delegation.
     // Every shortcut must include the following fields:
     // - name: String that will show up in the shortcut.
     // - short_name: Shorter string used if |name| is too long.
@@ -47,7 +47,7 @@ def twaManifest = [
     // 'customtabs' and 'webview'.
     fallbackType: 'customtabs',
     enableSiteSettingsShortcut: 'true',
-    orientation: 'default',
+    orientation: 'portrait',
 ]
 
 android {
@@ -57,8 +57,8 @@ android {
         applicationId "com.takumaapps.englishshadowing"
         minSdkVersion 21
         targetSdkVersion 35
-        versionCode 8
-        versionName "1.0.1"
+        versionCode 12
+        versionName "1.0.3"
 
         // The name for the application
         resValue "string", "appName", twaManifest.name
@@ -76,12 +76,12 @@ android {
             // The URL the Web Manifest for the Progressive Web App that the TWA points to. This
             // is used by Chrome OS and Meta Quest to open the Web version of the PWA instead of
             // the TWA, as it will probably give a better user experience for non-mobile devices.
-            resValue "string", "webManifestUrl", 'https://repository-name-shadowing-app.vercel.app/manifest.json'
+            resValue "string", "webManifestUrl", 'https://english-shadowing-app.vercel.app/manifest.json'
         
 
         
             // This is used by Meta Quest.
-            resValue "string", "fullScopeUrl", 'https://repository-name-shadowing-app.vercel.app/'
+            resValue "string", "fullScopeUrl", 'https://english-shadowing-app.vercel.app/'
         
 
         

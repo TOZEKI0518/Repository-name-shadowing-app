@@ -1,8 +1,8 @@
 {
   "packageId": "com.takumaapps.englishshadowing",
-  "host": "repository-name-shadowing-app.vercel.app",
-  "name": "English Shadowing",
-  "launcherName": "Shadowing",
+  "host": "english-shadowing-app.vercel.app",
+  "name": "英語シャドーイング",
+  "launcherName": "英語シャドーイング",
   "display": "standalone",
   "themeColor": "#0EA5E9",
   "themeColorDark": "#000000",
@@ -11,19 +11,19 @@
   "navigationDividerColor": "#000000",
   "navigationDividerColorDark": "#000000",
   "backgroundColor": "#FFFFFF",
-  "enableNotifications": true,
-  "startUrl": "/v2",
-  "iconUrl": "https://repository-name-shadowing-app.vercel.app/icon.png",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://english-shadowing-app.vercel.app/icon.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "C:\\Users\\81805\\shadowing-app\\android.keystore",
     "alias": "android"
   },
-  "appVersionName": "1.0.1",
-  "appVersionCode": 8,
+  "appVersionName": "1.0.3",
+  "appVersionCode": 11,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://repository-name-shadowing-app.vercel.app/manifest.json",
+  "webManifestUrl": "https://english-shadowing-app.vercel.app/manifest.json",
   "fallbackType": "customtabs",
   "features": {},
   "alphaDependencies": {
@@ -32,9 +32,9 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://repository-name-shadowing-app.vercel.app/",
+  "fullScopeUrl": "https://english-shadowing-app.vercel.app/",
   "minSdkVersion": 21,
-  "orientation": "default",
+  "orientation": "portrait",
   "fingerprints": [],
   "additionalTrustedOrigins": [],
   "retainedBundles": [],
@@ -42,5 +42,5 @@
   "fileHandlers": [],
   "launchHandlerClientMode": "",
   "displayOverride": [],
-  "appVersion": "1.0.1"
+  "appVersion": "1.0.3"
 }
