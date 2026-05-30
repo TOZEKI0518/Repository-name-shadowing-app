@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { lessons as baseLessons } from "../data";
-import { hospitalLessons } from "../data/hospital";
+import { lessons } from "../data";
 
 type Screen = "home" | "study";
 
@@ -20,7 +19,7 @@ const categoryOrder = [
   "Weather / Small Talk",
   "Sports",
   "Hobbies",
-  "Hospital",
+  "Work",
   "School / Study",
 ];
 
@@ -39,7 +38,7 @@ const categoryLabels: Record<string, string> = {
   "Weather / Small Talk": "天気・雑談",
   Sports: "スポーツ",
   Hobbies: "趣味",
-  Hospital: "病院",
+  Work: "仕事",
   "School / Study": "学校・勉強",
 };
 
@@ -58,7 +57,7 @@ const categoryIcons: Record<string, string> = {
   "Weather / Small Talk": "🌤️",
   Sports: "🎾",
   Hobbies: "🎨",
-  Hospital: "🏥",
+  Work: "💼",
   "School / Study": "📚",
 };
 
@@ -97,9 +96,6 @@ export default function Home() {
   const [autoPlay, setAutoPlay] = useState(false);
   const [showPremium, setShowPremium] = useState(false);
   const [showLessonModal, setShowLessonModal] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
-  const [showTerms, setShowTerms] = useState(false);
-  const [showPrivacy, setShowPrivacy] = useState(false);
 
   const [streak, setStreak] = useState(0);
   const [lastStudyDate, setLastStudyDate] = useState<string | null>(null);
@@ -115,22 +111,13 @@ export default function Home() {
     return ["All", ...categoryOrder];
   }, []);
 
-  const allLessons = useMemo(() => {
-    const hospitalIds = new Set(hospitalLessons.map((item) => item.id));
-    const baseWithoutWorkAndHospitalDuplicates = baseLessons.filter(
-      (item) => item.category !== "Work" && !hospitalIds.has(item.id)
-    );
-
-    return [...baseWithoutWorkAndHospitalDuplicates, ...hospitalLessons];
-  }, []);
-
-  const lesson = allLessons[lessonIndex] ?? allLessons[0];
+  const lesson = lessons[lessonIndex] ?? lessons[0];
   const current = lesson?.sentences[index] ?? lesson?.sentences[0];
 
   const filteredLessons =
     selectedCategory === "All"
-      ? allLessons
-      : allLessons.filter((item) => item.category === selectedCategory);
+      ? lessons
+      : lessons.filter((item) => item.category === selectedCategory);
 
   useEffect(() => {
     const savedStreak = localStorage.getItem("streak");
@@ -148,7 +135,7 @@ export default function Home() {
 
     if (savedLessonIndex) {
       const value = Number(savedLessonIndex);
-      if (!Number.isNaN(value) && allLessons[value]) setLessonIndex(value);
+      if (!Number.isNaN(value) && lessons[value]) setLessonIndex(value);
     }
 
     if (savedSentenceIndex) {
@@ -380,7 +367,7 @@ export default function Home() {
   const changeLesson = (newLessonIndex: number) => {
     stopAudio();
 
-    if (!allLessons[newLessonIndex]) return;
+    if (!lessons[newLessonIndex]) return;
 
     setLessonIndex(newLessonIndex);
     setIndex(0);
@@ -388,22 +375,6 @@ export default function Home() {
     setShowJapanese(false);
     setScreen("study");
     setShowLessonModal(false);
-  };
-
-  const goToSelectedCategoryLesson = () => {
-    stopAudio();
-
-    const firstLesson = filteredLessons[0];
-    if (!firstLesson) return;
-
-    const realIndex = lessons.findIndex((item) => item.id === firstLesson.id);
-    if (realIndex < 0) return;
-
-    setLessonIndex(realIndex);
-    setIndex(0);
-    setShowEnglish(false);
-    setShowJapanese(false);
-    setScreen("study");
   };
 
   const resetProgress = () => {
@@ -456,36 +427,12 @@ export default function Home() {
             </div>
 
             <button
-              onClick={() => setShowMenu(true)}
-              aria-label="メニューを開く"
-              className="rounded-2xl bg-white px-4 py-2 text-3xl font-black leading-none text-gray-700 shadow-sm"
+              onClick={() => setShowTutorial(true)}
+              className="rounded-full bg-white px-4 py-2 text-sm font-bold text-gray-500 shadow-sm"
             >
-              ≡
+              使い方
             </button>
           </header>
-
-          <section className="mb-5 rounded-3xl bg-white px-5 py-4 shadow-md">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-xl font-black text-orange-500">
-                  🔥 {streak} 日連続
-                </p>
-                <p className="mt-1 text-sm font-bold text-gray-400">
-                  連続記録！
-                </p>
-              </div>
-
-              <div
-                className={`rounded-full px-4 py-2 text-sm font-black ${
-                  todayDone
-                    ? "bg-emerald-100 text-emerald-600"
-                    : "bg-gray-100 text-gray-400"
-                }`}
-              >
-                {todayDone ? "今日完了" : "未完了"}
-              </div>
-            </div>
-          </section>
 
           <section className="mb-5">
             <p className="mb-3 text-sm font-black text-gray-700">
@@ -524,7 +471,7 @@ export default function Home() {
               </div>
             ) : (
               filteredLessons.map((item) => {
-                const realIndex = allLessons.findIndex((l) => l.id === item.id);
+                const realIndex = lessons.findIndex((l) => l.id === item.id);
                 const isLocked = false;
 
                 return (
@@ -564,21 +511,19 @@ export default function Home() {
           </section>
 
           <button
-            onClick={goToSelectedCategoryLesson}
-            disabled={filteredLessons.length === 0}
-            className={`fixed inset-x-4 bottom-4 mx-auto max-w-md rounded-2xl py-4 font-black text-white shadow-lg ${
-              filteredLessons.length === 0
-                ? "bg-gray-300"
-                : "bg-pink-500 active:scale-[0.98]"
-            }`}
+            onClick={() => {
+              stopAudio();
+              setScreen("study");
+            }}
+            className="fixed inset-x-4 bottom-4 mx-auto max-w-md rounded-2xl bg-sky-500 py-4 font-black text-white shadow-lg"
           >
-            ▶ レッスン画面へ
+            現在のレッスンに戻る
           </button>
         </div>
       )}
 
       {screen === "study" && (
-        <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-4 pb-48 pt-5">
+        <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-4 pb-36 pt-5">
           <header className="mb-3">
             <div className="mb-2">
               <div className="mb-2 flex items-center justify-between gap-3">
@@ -593,12 +538,33 @@ export default function Home() {
                 </div>
 
                 <button
-                  onClick={() => setShowMenu(true)}
-                  aria-label="メニューを開く"
-                  className="inline-flex shrink-0 items-center justify-center rounded-2xl bg-white px-4 py-2 text-3xl font-black leading-none text-gray-700 shadow-md"
+                  onClick={() => {
+                    stopAudio();
+                    setScreen("home");
+                  }}
+                  className="inline-flex shrink-0 items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-black text-sky-600 shadow-md"
                 >
-                  ≡
+                  <span className="text-xl">≡</span>
+                  一覧
                 </button>
+              </div>
+            </div>
+
+            <div className="mb-2 rounded-3xl bg-white px-5 py-3 shadow-md">
+              <div className="flex items-center justify-between">
+                <p className="text-xl font-black text-orange-500">
+                  🔥 {streak} 日連続
+                </p>
+
+                <div
+                  className={`rounded-full px-4 py-2 text-sm font-black ${
+                    todayDone
+                      ? "bg-emerald-100 text-emerald-600"
+                      : "bg-gray-100 text-gray-400"
+                  }`}
+                >
+                  {todayDone ? "今日完了" : "未完了"}
+                </div>
               </div>
             </div>
 
@@ -648,13 +614,13 @@ export default function Home() {
 
           <section className="space-y-3">
             <div
-              className={`rounded-3xl p-3 shadow-lg transition-all ${
+              className={`rounded-3xl p-4 shadow-lg transition-all ${
                 playingIndex === index
                   ? "bg-sky-50 ring-2 ring-sky-400"
                   : "bg-white"
               }`}
             >
-              <div className="mb-2 flex items-center justify-between">
+              <div className="mb-3 flex items-center justify-between">
                 <span className="rounded-full bg-sky-100 px-4 py-2 text-sm font-black text-sky-600">
                   English
                 </span>
@@ -666,27 +632,25 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="flex min-h-[40px] items-center rounded-2xl bg-gray-50 px-4 py-2">
-                {showEnglish ? (
-                  <p className="w-full text-lg font-bold leading-snug text-gray-900">
-                    {current.en}
-                  </p>
-                ) : (
-                  <p className="w-full text-center text-base font-bold text-gray-400">
-                    英文を隠しています
-                  </p>
-                )}
-              </div>
+              {showEnglish ? (
+                <p className="text-xl font-bold leading-relaxed text-gray-900">
+                  {current.en}
+                </p>
+              ) : (
+                <p className="rounded-2xl bg-gray-50 p-4 text-center text-lg font-bold text-gray-400">
+                  英文を隠しています
+                </p>
+              )}
             </div>
 
             <div
-              className={`rounded-3xl p-3 shadow-lg transition-all ${
+              className={`rounded-3xl p-4 shadow-lg transition-all ${
                 playingIndex === index
                   ? "bg-emerald-50 ring-2 ring-emerald-400"
                   : "bg-white"
               }`}
             >
-              <div className="mb-2 flex items-center justify-between">
+              <div className="mb-3 flex items-center justify-between">
                 <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-black text-emerald-600">
                   Japanese
                 </span>
@@ -698,17 +662,15 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="flex min-h-[40px] items-center rounded-2xl bg-gray-50 px-4 py-2">
-                {showJapanese ? (
-                  <p className="w-full text-base font-bold leading-snug text-gray-700">
-                    {current.jp}
-                  </p>
-                ) : (
-                  <p className="w-full text-center text-base font-bold text-gray-400">
-                    日本語訳を隠しています
-                  </p>
-                )}
-              </div>
+              {showJapanese ? (
+                <p className="text-base font-bold leading-relaxed text-gray-700">
+                  {current.jp}
+                </p>
+              ) : (
+                <p className="rounded-2xl bg-gray-50 p-4 text-center text-lg font-bold text-gray-400">
+                  日本語訳を隠しています
+                </p>
+              )}
             </div>
           </section>
 
@@ -779,196 +741,7 @@ export default function Home() {
                   次 →
                 </button>
               </div>
-
-              <button
-                onClick={() => {
-                  stopAudio();
-                  setScreen("home");
-                }}
-                className="mt-3 w-full rounded-2xl bg-white py-3 font-black text-pink-500 shadow-md"
-              >
-                🏠 ホームへ戻る
-              </button>
             </div>
-          </div>
-        </div>
-      )}
-
-
-      {showMenu && (
-        <div className="fixed inset-0 z-50 bg-black/20" onClick={() => setShowMenu(false)}>
-          <div
-            className="absolute right-4 top-16 w-64 rounded-3xl bg-white p-3 shadow-2xl"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              onClick={() => {
-                setShowMenu(false);
-                setShowTutorial(true);
-              }}
-              className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-black text-gray-700 active:bg-gray-50"
-            >
-              <span className="text-xl">📘</span>
-              使い方ガイド
-            </button>
-
-            <button
-              onClick={() => {
-                setShowMenu(false);
-                setShowPremium(true);
-              }}
-              className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-black text-pink-500 active:bg-pink-50"
-            >
-              <span className="text-xl">👑</span>
-              プレミアム会員
-            </button>
-
-            <button
-              onClick={() => {
-                setShowMenu(false);
-                setShowTerms(true);
-              }}
-              className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-black text-gray-700 active:bg-gray-50"
-            >
-              <span className="text-xl">📄</span>
-              利用規約
-            </button>
-
-            <button
-              onClick={() => {
-                setShowMenu(false);
-                setShowPrivacy(true);
-              }}
-              className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-black text-gray-700 active:bg-gray-50"
-            >
-              <span className="text-xl">🛡️</span>
-              プライバシーポリシー
-            </button>
-          </div>
-        </div>
-      )}
-
-      {showTerms && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-          <div className="max-h-[85vh] w-full max-w-sm overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl">
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-2xl font-black">利用規約</h2>
-              <button
-                onClick={() => setShowTerms(false)}
-                className="rounded-full bg-gray-100 px-3 py-1 text-lg font-black text-gray-500"
-              >
-                ×
-              </button>
-            </div>
-
-            <div className="space-y-4 text-sm leading-relaxed text-gray-600">
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">1. このアプリについて</h3>
-                <p>
-                  English Shadowingは、英語の音声を聞きながらシャドーイング練習を行うための学習アプリです。
-                  本アプリは学習補助を目的としており、特定の学習成果を保証するものではありません。
-                </p>
-              </section>
-
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">2. 利用上の注意</h3>
-                <p>
-                  利用者は、本アプリを法令および公序良俗に反しない範囲で利用するものとします。
-                  アプリの内容、デザイン、教材データを無断で複製、転載、再配布することは禁止します。
-                </p>
-              </section>
-
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">3. 免責事項</h3>
-                <p>
-                  本アプリの利用により発生した損害、不具合、データ消失等について、開発者は故意または重大な過失がある場合を除き責任を負いません。
-                  端末やブラウザの環境により、音声再生や表示が一部異なる場合があります。
-                </p>
-              </section>
-
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">4. 内容の変更</h3>
-                <p>
-                  開発者は、必要に応じて本アプリの機能、教材、料金、利用規約を変更できるものとします。
-                </p>
-              </section>
-
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">5. お問い合わせ</h3>
-                <p>
-                  本アプリに関するお問い合わせは、Google Playストア上に記載された連絡先よりお願いします。
-                </p>
-              </section>
-            </div>
-
-            <button
-              onClick={() => setShowTerms(false)}
-              className="mt-6 w-full rounded-2xl bg-sky-500 py-3 font-bold text-white shadow-lg"
-            >
-              閉じる
-            </button>
-          </div>
-        </div>
-      )}
-
-      {showPrivacy && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-          <div className="max-h-[85vh] w-full max-w-sm overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl">
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-2xl font-black">プライバシーポリシー</h2>
-              <button
-                onClick={() => setShowPrivacy(false)}
-                className="rounded-full bg-gray-100 px-3 py-1 text-lg font-black text-gray-500"
-              >
-                ×
-              </button>
-            </div>
-
-            <div className="space-y-4 text-sm leading-relaxed text-gray-600">
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">1. 取得する情報</h3>
-                <p>
-                  本アプリは、ログイン機能を提供しておらず、氏名、メールアドレス、住所など個人を直接特定する情報をアプリ内で取得しません。
-                </p>
-              </section>
-
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">2. 端末内に保存される情報</h3>
-                <p>
-                  学習中のレッスン番号、文章番号、再生速度、表示設定、連続学習日数などは、利便性向上のため利用者の端末内に保存されます。
-                  これらの情報は外部サーバーへ送信されません。
-                </p>
-              </section>
-
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">3. 音声機能について</h3>
-                <p>
-                  本アプリの音声読み上げは、利用者の端末またはブラウザの音声読み上げ機能を使用します。
-                  読み上げ品質や利用できる音声は、端末環境により異なります。
-                </p>
-              </section>
-
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">4. 第三者提供</h3>
-                <p>
-                  開発者は、法令に基づく場合を除き、利用者の個人情報を第三者へ提供しません。
-                </p>
-              </section>
-
-              <section>
-                <h3 className="mb-1 font-black text-gray-800">5. 改定</h3>
-                <p>
-                  本ポリシーは、必要に応じて変更される場合があります。重要な変更がある場合は、アプリ内またはストアページでお知らせします。
-                </p>
-              </section>
-            </div>
-
-            <button
-              onClick={() => setShowPrivacy(false)}
-              className="mt-6 w-full rounded-2xl bg-sky-500 py-3 font-bold text-white shadow-lg"
-            >
-              閉じる
-            </button>
           </div>
         </div>
       )}
@@ -1005,7 +778,7 @@ export default function Home() {
                 </div>
               ) : (
                 filteredLessons.map((item) => {
-                  const realIndex = allLessons.findIndex((l) => l.id === item.id);
+                  const realIndex = lessons.findIndex((l) => l.id === item.id);
                   const selected = realIndex === lessonIndex;
                   const isLocked = false;
 
@@ -1111,34 +884,40 @@ export default function Home() {
       {showPremium && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
           <div className="w-full max-w-sm rounded-3xl bg-white p-6 text-center shadow-2xl">
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-pink-100 text-2xl">
-              👑
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-2xl">
+              🔒
             </div>
 
-            <h2 className="mb-2 text-2xl font-black">プレミアム会員</h2>
+            <h2 className="mb-2 text-2xl font-black">プレミアムプラン</h2>
 
             <p className="mb-4 text-sm leading-relaxed text-gray-600">
-              プレミアム機能は現在準備中です。公開後のアップデートで、より多くのレッスンや便利な機能を追加予定です。
+              すべてのTOEIC・日常会話シャドウイング教材を解放して、
+              毎日10分の英語学習を続けましょう。
             </p>
 
             <div className="mb-5 rounded-2xl bg-gray-50 p-4 text-left text-sm text-gray-700">
-              <p className="mb-2 font-black text-gray-800">今後追加予定</p>
-              <p>✅ 追加レッスン</p>
-              <p>✅ TOEIC対策レッスンの拡充</p>
-              <p>✅ ビジネス英会話レッスンの拡充</p>
-              <p>✅ 広告非表示</p>
-              <p>✅ 学習を続けやすくする追加機能</p>
+              <p>✅ 全レッスン解放</p>
+              <p>✅ 日常会話 / TOEIC Part 3 / Part 4 対応</p>
+              <p>✅ 1回 / 3回 / 5回リピート</p>
+              <p>✅ 連続再生モード</p>
+              <p>✅ 学習ストリーク記録</p>
+              <p>✅ 続きから再開</p>
             </div>
 
-            <p className="mb-4 text-xs leading-relaxed text-gray-400">
-              現在、課金・決済機能は実装されていません。
-            </p>
+            <p className="mb-4 text-lg font-black text-gray-900">月額 200円</p>
 
             <button
-              className="w-full rounded-2xl bg-pink-500 py-3 font-bold text-white shadow-lg"
+              className="mb-3 w-full rounded-2xl bg-sky-500 py-3 font-bold text-white shadow-lg"
+              onClick={() => alert("※決済機能はこれから実装します")}
+            >
+              今すぐ始める
+            </button>
+
+            <button
+              className="text-sm font-semibold text-gray-400"
               onClick={() => setShowPremium(false)}
             >
-              閉じる
+              あとで
             </button>
           </div>
         </div>
