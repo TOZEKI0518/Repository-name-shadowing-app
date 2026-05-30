@@ -396,7 +396,7 @@ export default function Home() {
     const firstLesson = filteredLessons[0];
     if (!firstLesson) return;
 
-    const realIndex = lessons.findIndex((item) => item.id === firstLesson.id);
+    const realIndex = allLessons.findIndex((item) => item.id === firstLesson.id);
     if (realIndex < 0) return;
 
     setLessonIndex(realIndex);
