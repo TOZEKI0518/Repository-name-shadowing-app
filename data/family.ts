@@ -15,7 +15,7 @@ export const familyLessons = [
       { en: "That sounds like a nice routine.", jp: "それは良い習慣ですね。" },
       { en: "Family time helps me relax after work.", jp: "家族との時間は仕事後にリラックスできます。" },
       { en: "I think family support is important.", jp: "家族の支えは大切だと思います。" },
-      { en: "I feel the same way.", jp: "私も同じように感じます。" },
+      { en: "Me too. Family time helps me relax after a busy day.", jp: "私も同じように感じます。" },
     ],
   },
   {

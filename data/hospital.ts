@@ -539,7 +539,7 @@ export const hospitalLessons = [
     duration: "10 min",
     sentences: [
       { en: "You can leave the hospital today.", jp: "本日退院できます。" },
-      { en: "That's great news.", jp: "それは良かったです。" },
+      { en: "That makes sense. Let’s continue with that.", jp: "それは良かったです。" },
       { en: "Please avoid hard exercise for one week.", jp: "1週間は激しい運動を避けてください。" },
       { en: "Can I take a bath tonight?", jp: "今夜お風呂に入ってもいいですか？" },
       { en: "Please take a shower instead of a bath today.", jp: "今日は入浴ではなくシャワーにしてください。" },
