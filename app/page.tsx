@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { lessons as baseLessons } from "../data";
-import { hospitalLessons } from "../data/hospital";
 
 type Screen = "home" | "study";
 
@@ -132,15 +131,9 @@ export default function Home() {
   }, []);
 
   const allLessons = useMemo(() => {
-    const hospitalIds = new Set(hospitalLessons.map((item) => item.id));
-    const baseWithoutWorkAndHospitalDuplicates = baseLessons
-      .filter((item) => item.category !== "Work" && !hospitalIds.has(item.id))
+    return baseLessons
+      .filter((item) => normalizeCategory(item.category) !== "Work")
       .map(normalizeLessonCategory);
-
-    return [
-      ...baseWithoutWorkAndHospitalDuplicates,
-      ...hospitalLessons.map(normalizeLessonCategory),
-    ];
   }, []);
 
   const lesson = allLessons[lessonIndex] ?? allLessons[0];
@@ -415,7 +408,7 @@ export default function Home() {
     const firstLesson = filteredLessons[0];
     if (!firstLesson) return;
 
-    const realIndex = allLessons.findIndex((item) => item.id === firstLesson.id);
+    const realIndex = allLessons.findIndex((item) => item.id === firstLesson.id && item.category === firstLesson.category);
     if (realIndex < 0) return;
 
     setLessonIndex(realIndex);
@@ -543,12 +536,12 @@ export default function Home() {
               </div>
             ) : (
               filteredLessons.map((item) => {
-                const realIndex = allLessons.findIndex((l) => l.id === item.id);
+                const realIndex = allLessons.findIndex((l) => l.id === item.id && l.category === item.category);
                 const isLocked = false;
 
                 return (
                   <button
-                    key={item.id}
+                    key={`${item.category}-${item.id}`}
                     onClick={() => {
                       if (isLocked) {
                         setShowPremium(true);
@@ -1024,13 +1017,13 @@ export default function Home() {
                 </div>
               ) : (
                 filteredLessons.map((item) => {
-                  const realIndex = allLessons.findIndex((l) => l.id === item.id);
+                  const realIndex = allLessons.findIndex((l) => l.id === item.id && l.category === item.category);
                   const selected = realIndex === lessonIndex;
                   const isLocked = false;
 
                   return (
                     <button
-                      key={item.id}
+                      key={`${item.category}-${item.id}`}
                       onClick={() => {
                         if (isLocked) {
                           setShowPremium(true);
