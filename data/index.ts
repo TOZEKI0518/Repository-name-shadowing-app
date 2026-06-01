@@ -1,10 +1,9 @@
 import { dailyConversationLessons } from "./dailyConversation";
 import { familyLessons } from "./family";
 import { businessLessons } from "./business";
-import { toeicLessons } from "./toeic";
+import { interviewLessons } from "./interview";
 import { travelLessons } from "./travel";
 import { sportsLessons } from "./sports";
-import { hotelAirportLessons } from "./hotelAirport";
 import { cafeRestaurantLessons } from "./cafeRestaurant";
 import { shoppingLessons } from "./shopping";
 import { weatherSmallTalkLessons } from "./weatherSmallTalk";
@@ -13,15 +12,15 @@ import { hobbiesLessons } from "./hobbies";
 import { workLessons } from "./work";
 import { schoolStudyLessons } from "./schoolStudy";
 import { directionsLessons } from "./directions";
+import { hospitalLessons } from "./hospital";
 
 export const lessons = [
   ...dailyConversationLessons,
   ...familyLessons,
   ...businessLessons,
-  ...toeicLessons,
+  ...interviewLessons,
   ...travelLessons,
   ...sportsLessons,
-  ...hotelAirportLessons,
   ...cafeRestaurantLessons,
   ...shoppingLessons,
   ...weatherSmallTalkLessons,
@@ -30,4 +29,5 @@ export const lessons = [
   ...workLessons,
   ...schoolStudyLessons,
   ...directionsLessons,
+  ...hospitalLessons,
 ];
