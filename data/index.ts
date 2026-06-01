@@ -15,19 +15,19 @@ import { directionsLessons } from "./directions";
 import { hospitalLessons } from "./hospital";
 
 export const lessons = [
-  ...dailyConversationLessons,
-  ...familyLessons,
-  ...businessLessons,
-  ...interviewLessons,
-  ...travelLessons,
-  ...sportsLessons,
-  ...cafeRestaurantLessons,
-  ...shoppingLessons,
-  ...weatherSmallTalkLessons,
-  ...phoneOnlineMeetingLessons,
-  ...hobbiesLessons,
-  ...schoolStudyLessons,
-  ...directionsLessons,
-  ...hospitalLessons,
-  ...loveLessons,
+  ...dailyConversationLessons,    // 1-30
+  ...familyLessons,               // 31-60
+  ...businessLessons,             // 61-90
+  ...interviewLessons,            // 91-120
+  ...travelLessons,               // 121-150
+  ...cafeRestaurantLessons,       // 151-180
+  ...shoppingLessons,             // 181-210
+  ...directionsLessons,           // 211-240
+  ...phoneOnlineMeetingLessons,   // 241-270
+  ...weatherSmallTalkLessons,     // 271-300
+  ...sportsLessons,               // 301-330
+  ...hobbiesLessons,              // 331-360
+  ...hospitalLessons,             // 361-390
+  ...schoolStudyLessons,          // 391-420
+  ...loveLessons,                 // 421-450
 ];
