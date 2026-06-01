@@ -10,9 +10,9 @@ const categoryOrder = [
   "Daily Conversation",
   "Family",
   "Business",
-  "Interview",
+  "TOEIC",
   "Travel",
-  "Love / Dating",
+  "Hotel & Airport",
   "Cafe & Restaurant",
   "Shopping",
   "Directions",
@@ -29,9 +29,9 @@ const categoryLabels: Record<string, string> = {
   "Daily Conversation": "日常会話",
   Family: "家族",
   Business: "ビジネス",
-  Interview: "面接",
+  TOEIC: "TOEIC",
   Travel: "旅行",
-  "Love / Dating": "恋愛",
+  "Hotel & Airport": "ホテル・空港",
   "Cafe & Restaurant": "カフェ・レストラン",
   Shopping: "買い物",
   Directions: "道案内",
@@ -48,9 +48,9 @@ const categoryIcons: Record<string, string> = {
   "Daily Conversation": "💬",
   Family: "👨‍👩‍👧",
   Business: "💼",
-  Interview: "🎤",
+  TOEIC: "📗",
   Travel: "✈️",
-  "Love / Dating": "❤️",
+  "Hotel & Airport": "🏨",
   "Cafe & Restaurant": "☕",
   Shopping: "🛍️",
   Directions: "🗺️",
@@ -85,22 +85,6 @@ const tutorialSteps = [
   },
 ];
 
-const normalizeCategory = (category: string) => {
-  if (category === "TOEIC") return "Interview";
-  if (category === "Hotel & Airport") return "Travel";
-  return category;
-};
-
-const normalizeLessonCategory = <T extends { category: string }>(lesson: T): T => {
-  const normalizedCategory = normalizeCategory(lesson.category);
-  if (normalizedCategory === lesson.category) return lesson;
-
-  return {
-    ...lesson,
-    category: normalizedCategory,
-  };
-};
-
 export default function Home() {
   const [screen, setScreen] = useState<Screen>("home");
   const [lessonIndex, setLessonIndex] = useState(0);
@@ -133,14 +117,11 @@ export default function Home() {
 
   const allLessons = useMemo(() => {
     const hospitalIds = new Set(hospitalLessons.map((item) => item.id));
-    const baseWithoutWorkAndHospitalDuplicates = baseLessons
-      .filter((item) => item.category !== "Work" && !hospitalIds.has(item.id))
-      .map(normalizeLessonCategory);
+    const baseWithoutWorkAndHospitalDuplicates = baseLessons.filter(
+      (item) => item.category !== "Work" && !hospitalIds.has(item.id)
+    );
 
-    return [
-      ...baseWithoutWorkAndHospitalDuplicates,
-      ...hospitalLessons.map(normalizeLessonCategory),
-    ];
+    return [...baseWithoutWorkAndHospitalDuplicates, ...hospitalLessons];
   }, []);
 
   const lesson = allLessons[lessonIndex] ?? allLessons[0];
@@ -1143,7 +1124,7 @@ export default function Home() {
             <div className="mb-5 rounded-2xl bg-gray-50 p-4 text-left text-sm text-gray-700">
               <p className="mb-2 font-black text-gray-800">今後追加予定</p>
               <p>✅ 追加レッスン</p>
-              <p>✅ 面接英会話レッスンの拡充</p>
+              <p>✅ TOEIC対策レッスンの拡充</p>
               <p>✅ ビジネス英会話レッスンの拡充</p>
               <p>✅ 広告非表示</p>
               <p>✅ 学習を続けやすくする追加機能</p>
