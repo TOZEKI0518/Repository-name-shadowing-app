@@ -10,7 +10,6 @@ import { shoppingLessons } from "./shopping";
 import { weatherSmallTalkLessons } from "./weatherSmallTalk";
 import { phoneOnlineMeetingLessons } from "./phoneOnlineMeeting";
 import { hobbiesLessons } from "./hobbies";
-import { workLessons } from "./work";
 import { schoolStudyLessons } from "./schoolStudy";
 import { directionsLessons } from "./directions";
 import { hospitalLessons } from "./hospital";
@@ -21,15 +20,14 @@ export const lessons = [
   ...businessLessons,
   ...interviewLessons,
   ...travelLessons,
-  ...loveLessons,
   ...sportsLessons,
   ...cafeRestaurantLessons,
   ...shoppingLessons,
   ...weatherSmallTalkLessons,
   ...phoneOnlineMeetingLessons,
   ...hobbiesLessons,
-  ...workLessons,
   ...schoolStudyLessons,
   ...directionsLessons,
   ...hospitalLessons,
+  ...loveLessons,
 ];
