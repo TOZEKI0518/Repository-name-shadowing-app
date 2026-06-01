@@ -12,7 +12,6 @@ const categoryOrder = [
   "Business",
   "Interview",
   "Travel",
-  "Love / Dating",
   "Cafe & Restaurant",
   "Shopping",
   "Directions",
@@ -22,6 +21,7 @@ const categoryOrder = [
   "Hobbies",
   "Hospital",
   "School / Study",
+  "Love / Dating",
 ];
 
 const categoryLabels: Record<string, string> = {

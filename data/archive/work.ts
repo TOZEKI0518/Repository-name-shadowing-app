@@ -1,6 +1,6 @@
 export const workLessons = [
   {
-    id: 1101,
+    id: 1,
     title: "Morning at Work",
     category: "Work",
     level: "Beginner",
@@ -20,7 +20,7 @@ export const workLessons = [
   },
 
   {
-    id: 1102,
+    id: 2,
     title: "Busy Day",
     category: "Work",
     level: "Beginner",
@@ -40,7 +40,7 @@ export const workLessons = [
   },
 
   {
-    id: 1103,
+    id: 3,
     title: "Talking with Coworkers",
     category: "Work",
     level: "Beginner",
@@ -60,7 +60,7 @@ export const workLessons = [
   },
 
   {
-    id: 1104,
+    id: 4,
     title: "Asking for Help",
     category: "Work",
     level: "Beginner",
@@ -80,7 +80,7 @@ export const workLessons = [
   },
 
   {
-    id: 1105,
+    id: 5,
     title: "Explaining a Task",
     category: "Work",
     level: "Intermediate",
@@ -100,7 +100,7 @@ export const workLessons = [
   },
 
   {
-    id: 1106,
+    id: 6,
     title: "Lunch Break",
     category: "Work",
     level: "Beginner",
@@ -120,7 +120,7 @@ export const workLessons = [
   },
 
   {
-    id: 1107,
+    id: 7,
     title: "Working from Home",
     category: "Work",
     level: "Beginner",
@@ -140,7 +140,7 @@ export const workLessons = [
   },
 
   {
-    id: 1108,
+    id: 8,
     title: "Office Small Talk",
     category: "Work",
     level: "Beginner",
@@ -160,7 +160,7 @@ export const workLessons = [
   },
 
   {
-    id: 1109,
+    id: 9,
     title: "Finishing a Report",
     category: "Work",
     level: "Intermediate",
@@ -180,7 +180,7 @@ export const workLessons = [
   },
 
   {
-    id: 1110,
+    id: 10,
     title: "Deadline Pressure",
     category: "Work",
     level: "Intermediate",
@@ -200,7 +200,7 @@ export const workLessons = [
   },
 
   {
-    id: 1111,
+    id: 11,
     title: "Talking to a Manager",
     category: "Work",
     level: "Intermediate",
@@ -220,7 +220,7 @@ export const workLessons = [
   },
 
   {
-    id: 1112,
+    id: 12,
     title: "Asking Questions",
     category: "Work",
     level: "Beginner",
@@ -240,7 +240,7 @@ export const workLessons = [
   },
 
   {
-    id: 1113,
+    id: 13,
     title: "Sending an Email",
     category: "Work",
     level: "Beginner",
@@ -260,7 +260,7 @@ export const workLessons = [
   },
 
   {
-    id: 1114,
+    id: 14,
     title: "Business Trip",
     category: "Work",
     level: "Intermediate",
@@ -280,7 +280,7 @@ export const workLessons = [
   },
 
   {
-    id: 1115,
+    id: 15,
     title: "Preparing a Presentation",
     category: "Work",
     level: "Intermediate",
@@ -300,7 +300,7 @@ export const workLessons = [
   },
 
   {
-    id: 1116,
+    id: 16,
     title: "Team Project",
     category: "Work",
     level: "Intermediate",
@@ -320,7 +320,7 @@ export const workLessons = [
   },
 
   {
-    id: 1117,
+    id: 17,
     title: "Solving Problems",
     category: "Work",
     level: "Intermediate",
@@ -340,7 +340,7 @@ export const workLessons = [
   },
 
   {
-    id: 1118,
+    id: 18,
     title: "Learning New Skills",
     category: "Work",
     level: "Intermediate",
@@ -360,7 +360,7 @@ export const workLessons = [
   },
 
   {
-    id: 1119,
+    id: 19,
     title: "Working Overtime",
     category: "Work",
     level: "Beginner",
@@ -380,7 +380,7 @@ export const workLessons = [
   },
 
   {
-    id: 1120,
+    id: 20,
     title: "Taking a Break",
     category: "Work",
     level: "Beginner",
@@ -400,7 +400,7 @@ export const workLessons = [
   },
 
   {
-    id: 1121,
+    id: 21,
     title: "Office Meeting",
     category: "Work",
     level: "Beginner",
@@ -420,7 +420,7 @@ export const workLessons = [
   },
 
   {
-    id: 1122,
+    id: 22,
     title: "Talking About Clients",
     category: "Work",
     level: "Intermediate",
@@ -440,7 +440,7 @@ export const workLessons = [
   },
 
   {
-    id: 1123,
+    id: 23,
     title: "Handling Stress",
     category: "Work",
     level: "Intermediate",
@@ -460,7 +460,7 @@ export const workLessons = [
   },
 
   {
-    id: 1124,
+    id: 24,
     title: "Time Management",
     category: "Work",
     level: "Intermediate",
@@ -480,7 +480,7 @@ export const workLessons = [
   },
 
   {
-    id: 1125,
+    id: 25,
     title: "Remote Work",
     category: "Work",
     level: "Intermediate",
@@ -500,7 +500,7 @@ export const workLessons = [
   },
 
   {
-    id: 1126,
+    id: 26,
     title: "Career Goals",
     category: "Work",
     level: "Intermediate",
@@ -520,7 +520,7 @@ export const workLessons = [
   },
 
   {
-    id: 1127,
+    id: 27,
     title: "Asking for Feedback",
     category: "Work",
     level: "Intermediate",
@@ -540,7 +540,7 @@ export const workLessons = [
   },
 
   {
-    id: 1128,
+    id: 28,
     title: "End of the Workday",
     category: "Work",
     level: "Beginner",
@@ -560,7 +560,7 @@ export const workLessons = [
   },
 
   {
-    id: 1129,
+    id: 29,
     title: "Planning Tomorrow",
     category: "Work",
     level: "Beginner",
@@ -580,7 +580,7 @@ export const workLessons = [
   },
 
   {
-    id: 1130,
+    id: 30,
     title: "Work-Life Balance",
     category: "Work",
     level: "Intermediate",

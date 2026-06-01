@@ -1,6 +1,6 @@
 export const cafeRestaurantLessons = [
   {
-    id: 1,
+    id: 601,
     title: "Ordering Coffee",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -20,7 +20,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 2,
+    id: 602,
     title: "At a Cafe",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -40,7 +40,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 3,
+    id: 603,
     title: "Asking for Recommendations",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -60,7 +60,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 4,
+    id: 604,
     title: "Paying the Bill",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -80,7 +80,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 5,
+    id: 605,
     title: "Reserving a Table",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -100,7 +100,7 @@ export const cafeRestaurantLessons = [
   },
 
     {
-    id: 6,
+    id: 606,
     title: "Ordering Dessert",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -120,7 +120,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 7,
+    id: 607,
     title: "Talking with Friends",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -140,7 +140,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 8,
+    id: 608,
     title: "Working at a Cafe",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -160,7 +160,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 9,
+    id: 609,
     title: "Breakfast at a Cafe",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -180,7 +180,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 10,
+    id: 610,
     title: "Lunch Time",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -200,7 +200,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 11,
+    id: 611,
     title: "Dinner Reservation",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -220,7 +220,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 12,
+    id: 612,
     title: "Fast Food Restaurant",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -240,7 +240,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 13,
+    id: 613,
     title: "Taking Out Food",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -260,7 +260,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 14,
+    id: 614,
     title: "Asking About Ingredients",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -280,7 +280,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 15,
+    id: 615,
     title: "Vegan Options",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -300,7 +300,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 16,
+    id: 616,
     title: "Spicy Food",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -320,7 +320,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 17,
+    id: 617,
     title: "Favorite Cafe",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -340,7 +340,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 18,
+    id: 618,
     title: "Waiting for a Table",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -360,7 +360,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 19,
+    id: 619,
     title: "Talking About Food",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -380,7 +380,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 20,
+    id: 620,
     title: "Complimenting the Chef",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -400,7 +400,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 21,
+    id: 621,
     title: "Ordering Drinks",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -420,7 +420,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 22,
+    id: 622,
     title: "Splitting the Bill",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -440,7 +440,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 23,
+    id: 623,
     title: "Busy Cafe",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -460,7 +460,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 24,
+    id: 624,
     title: "Romantic Dinner",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -480,7 +480,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 25,
+    id: 625,
     title: "Meeting at a Cafe",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -500,7 +500,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 26,
+    id: 626,
     title: "Using Cafe Wi-Fi",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -520,7 +520,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 27,
+    id: 627,
     title: "Asking for Refills",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -540,7 +540,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 28,
+    id: 628,
     title: "Dessert Cafe",
     category: "Cafe & Restaurant",
     level: "Beginner",
@@ -560,7 +560,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 29,
+    id: 629,
     title: "Trying Local Food",
     category: "Cafe & Restaurant",
     level: "Intermediate",
@@ -580,7 +580,7 @@ export const cafeRestaurantLessons = [
   },
 
   {
-    id: 30,
+    id: 630,
     title: "Talking About Restaurants",
     category: "Cafe & Restaurant",
     level: "Intermediate",

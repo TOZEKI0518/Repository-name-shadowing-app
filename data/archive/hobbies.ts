@@ -1,6 +1,6 @@
 export const hobbiesLessons = [
   {
-    id: 1,
+    id: 1001,
     title: "Talking About Hobbies",
     category: "Hobbies",
     level: "Beginner",
@@ -20,7 +20,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 2,
+    id: 1002,
     title: "Photography",
     category: "Hobbies",
     level: "Beginner",
@@ -40,7 +40,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 3,
+    id: 1003,
     title: "Watching Movies",
     category: "Hobbies",
     level: "Beginner",
@@ -60,7 +60,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 4,
+    id: 1004,
     title: "Listening to Music",
     category: "Hobbies",
     level: "Beginner",
@@ -80,7 +80,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 5,
+    id: 1005,
     title: "Reading Books",
     category: "Hobbies",
     level: "Beginner",
@@ -100,7 +100,7 @@ export const hobbiesLessons = [
   },
 
     {
-    id: 6,
+    id: 1006,
     title: "Cooking",
     category: "Hobbies",
     level: "Beginner",
@@ -120,7 +120,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 7,
+    id: 1007,
     title: "Traveling",
     category: "Hobbies",
     level: "Beginner",
@@ -140,7 +140,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 8,
+    id: 1008,
     title: "Playing Games",
     category: "Hobbies",
     level: "Beginner",
@@ -160,7 +160,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 9,
+    id: 1009,
     title: "Tennis Hobby",
     category: "Hobbies",
     level: "Beginner",
@@ -180,7 +180,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 10,
+    id: 1010,
     title: "Soccer Hobby",
     category: "Hobbies",
     level: "Beginner",
@@ -200,7 +200,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 11,
+    id: 1011,
     title: "Going to Cafes",
     category: "Hobbies",
     level: "Beginner",
@@ -220,7 +220,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 12,
+    id: 1012,
     title: "Drawing",
     category: "Hobbies",
     level: "Beginner",
@@ -240,7 +240,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 13,
+    id: 1013,
     title: "Learning English",
     category: "Hobbies",
     level: "Beginner",
@@ -260,7 +260,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 14,
+    id: 1014,
     title: "Taking Photos Outside",
     category: "Hobbies",
     level: "Beginner",
@@ -280,7 +280,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 15,
+    id: 1015,
     title: "Weekend Hobby",
     category: "Hobbies",
     level: "Beginner",
@@ -300,7 +300,7 @@ export const hobbiesLessons = [
   },
 
     {
-    id: 16,
+    id: 1016,
     title: "Collecting Things",
     category: "Hobbies",
     level: "Beginner",
@@ -320,7 +320,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 17,
+    id: 1017,
     title: "Watching YouTube",
     category: "Hobbies",
     level: "Beginner",
@@ -340,7 +340,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 18,
+    id: 1018,
     title: "Fitness",
     category: "Hobbies",
     level: "Beginner",
@@ -360,7 +360,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 19,
+    id: 1019,
     title: "Gardening",
     category: "Hobbies",
     level: "Beginner",
@@ -380,7 +380,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 20,
+    id: 1020,
     title: "Trying New Restaurants",
     category: "Hobbies",
     level: "Beginner",
@@ -400,7 +400,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 21,
+    id: 1021,
     title: "Editing Photos",
     category: "Hobbies",
     level: "Intermediate",
@@ -420,7 +420,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 22,
+    id: 1022,
     title: "Smartphone Photography",
     category: "Hobbies",
     level: "Beginner",
@@ -440,7 +440,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 23,
+    id: 1023,
     title: "Playing an Instrument",
     category: "Hobbies",
     level: "Beginner",
@@ -460,7 +460,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 24,
+    id: 1024,
     title: "Singing",
     category: "Hobbies",
     level: "Beginner",
@@ -480,7 +480,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 25,
+    id: 1025,
     title: "Walking",
     category: "Hobbies",
     level: "Beginner",
@@ -500,7 +500,7 @@ export const hobbiesLessons = [
   },
 
     {
-    id: 26,
+    id: 1026,
     title: "Cycling",
     category: "Hobbies",
     level: "Beginner",
@@ -520,7 +520,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 27,
+    id: 1027,
     title: "Talking About Favorite Things",
     category: "Hobbies",
     level: "Beginner",
@@ -540,7 +540,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 28,
+    id: 1028,
     title: "Starting a New Hobby",
     category: "Hobbies",
     level: "Intermediate",
@@ -560,7 +560,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 29,
+    id: 1029,
     title: "Hobby with Friends",
     category: "Hobbies",
     level: "Beginner",
@@ -580,7 +580,7 @@ export const hobbiesLessons = [
   },
 
   {
-    id: 30,
+    id: 1030,
     title: "Why Hobbies Matter",
     category: "Hobbies",
     level: "Intermediate",

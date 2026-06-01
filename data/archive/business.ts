@@ -1,6 +1,6 @@
 export const businessLessons = [
   {
-    id: 1,
+    id: 101,
     title: "Morning Check-in",
     category: "Business",
     level: "Beginner",
@@ -19,7 +19,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 2,
+    id: 102,
     title: "Joining a Meeting",
     category: "Business",
     level: "Beginner",
@@ -38,7 +38,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 3,
+    id: 103,
     title: "Asking for Clarification",
     category: "Business",
     level: "Beginner",
@@ -57,7 +57,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 4,
+    id: 104,
     title: "Reporting Progress",
     category: "Business",
     level: "Beginner",
@@ -76,7 +76,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 5,
+    id: 105,
     title: "Sending an Email",
     category: "Business",
     level: "Beginner",
@@ -95,7 +95,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 6,
+    id: 106,
     title: "Discussing Priorities",
     category: "Business",
     level: "Intermediate",
@@ -114,7 +114,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 7,
+    id: 107,
     title: "Client Request",
     category: "Business",
     level: "Intermediate",
@@ -133,7 +133,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 8,
+    id: 108,
     title: "Reviewing a Report",
     category: "Business",
     level: "Intermediate",
@@ -152,7 +152,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 9,
+    id: 109,
     title: "Explaining a Delay",
     category: "Business",
     level: "Intermediate",
@@ -171,7 +171,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 10,
+    id: 110,
     title: "Giving Feedback",
     category: "Business",
     level: "Intermediate",
@@ -190,7 +190,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 11,
+    id: 111,
     title: "Requesting Information",
     category: "Business",
     level: "Intermediate",
@@ -209,7 +209,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 12,
+    id: 112,
     title: "Scheduling a Meeting",
     category: "Business",
     level: "Beginner",
@@ -228,7 +228,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 13,
+    id: 113,
     title: "Explaining a Process",
     category: "Business",
     level: "Intermediate",
@@ -247,7 +247,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 14,
+    id: 114,
     title: "Handling a Mistake",
     category: "Business",
     level: "Intermediate",
@@ -266,7 +266,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 15,
+    id: 115,
     title: "Following Up",
     category: "Business",
     level: "Beginner",
@@ -285,7 +285,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 16,
+    id: 116,
     title: "Team Coordination",
     category: "Business",
     level: "Intermediate",
@@ -304,7 +304,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 17,
+    id: 117,
     title: "Talking to a Manager",
     category: "Business",
     level: "Intermediate",
@@ -323,7 +323,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 18,
+    id: 118,
     title: "Presenting an Idea",
     category: "Business",
     level: "Intermediate",
@@ -342,7 +342,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 19,
+    id: 119,
     title: "Negotiating a Deadline",
     category: "Business",
     level: "Intermediate",
@@ -361,7 +361,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 20,
+    id: 120,
     title: "Discussing Risk",
     category: "Business",
     level: "Intermediate",
@@ -380,7 +380,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 21,
+    id: 121,
     title: "Working with London",
     category: "Business",
     level: "Intermediate",
@@ -399,7 +399,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 22,
+    id: 122,
     title: "Process Improvement",
     category: "Business",
     level: "Intermediate",
@@ -418,7 +418,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 23,
+    id: 123,
     title: "Explaining an Issue",
     category: "Business",
     level: "Intermediate",
@@ -437,7 +437,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 24,
+    id: 124,
     title: "Confirming Understanding",
     category: "Business",
     level: "Beginner",
@@ -456,7 +456,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 25,
+    id: 125,
     title: "Dealing with Urgency",
     category: "Business",
     level: "Intermediate",
@@ -475,7 +475,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 26,
+    id: 126,
     title: "Handover Notes",
     category: "Business",
     level: "Intermediate",
@@ -494,7 +494,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 27,
+    id: 127,
     title: "Checking Data Quality",
     category: "Business",
     level: "Intermediate",
@@ -513,7 +513,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 28,
+    id: 128,
     title: "Closing a Meeting",
     category: "Business",
     level: "Beginner",
@@ -532,7 +532,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 29,
+    id: 129,
     title: "Discussing Workload",
     category: "Business",
     level: "Intermediate",
@@ -551,7 +551,7 @@ export const businessLessons = [
     ],
   },
   {
-    id: 30,
+    id: 130,
     title: "Year-end Review",
     category: "Business",
     level: "Intermediate",

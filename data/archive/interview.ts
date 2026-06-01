@@ -1,6 +1,6 @@
 export const interviewLessons = [
   {
-    id: 91,
+    id: 1,
     title: "Interview Self Introduction",
     category: "Interview",
     level: "Intermediate",
@@ -19,7 +19,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 92,
+    id: 2,
     title: "Talking About Work Experience",
     category: "Interview",
     level: "Intermediate",
@@ -38,7 +38,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 93,
+    id: 3,
     title: "Explaining Strengths",
     category: "Interview",
     level: "Intermediate",
@@ -57,7 +57,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 94,
+    id: 4,
     title: "Explaining Weaknesses",
     category: "Interview",
     level: "Intermediate",
@@ -76,7 +76,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 95,
+    id: 5,
     title: "Reason for Changing Jobs",
     category: "Interview",
     level: "Intermediate",
@@ -95,7 +95,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 96,
+    id: 6,
     title: "Why This Company",
     category: "Interview",
     level: "Intermediate",
@@ -114,7 +114,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 97,
+    id: 7,
     title: "Handling Pressure",
     category: "Interview",
     level: "Intermediate",
@@ -133,7 +133,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 98,
+    id: 8,
     title: "Solving Problems",
     category: "Interview",
     level: "Intermediate",
@@ -152,7 +152,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 99,
+    id: 9,
     title: "Teamwork",
     category: "Interview",
     level: "Intermediate",
@@ -171,7 +171,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 100,
+    id: 10,
     title: "Communication Skills",
     category: "Interview",
     level: "Intermediate",
@@ -190,7 +190,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 101,
+    id: 11,
     title: "Career Goals",
     category: "Interview",
     level: "Intermediate",
@@ -209,7 +209,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 102,
+    id: 12,
     title: "Achievements",
     category: "Interview",
     level: "Intermediate",
@@ -228,7 +228,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 103,
+    id: 13,
     title: "Handling Mistakes",
     category: "Interview",
     level: "Intermediate",
@@ -247,7 +247,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 104,
+    id: 14,
     title: "Learning New Skills",
     category: "Interview",
     level: "Intermediate",
@@ -266,7 +266,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 105,
+    id: 15,
     title: "Working With Different Teams",
     category: "Interview",
     level: "Intermediate",
@@ -285,7 +285,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 106,
+    id: 16,
     title: "Time Management",
     category: "Interview",
     level: "Intermediate",
@@ -304,7 +304,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 107,
+    id: 17,
     title: "Leadership Potential",
     category: "Interview",
     level: "Intermediate",
@@ -323,7 +323,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 108,
+    id: 18,
     title: "Adapting To Change",
     category: "Interview",
     level: "Intermediate",
@@ -342,7 +342,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 109,
+    id: 19,
     title: "Motivation",
     category: "Interview",
     level: "Intermediate",
@@ -361,7 +361,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 110,
+    id: 20,
     title: "Difficult Feedback",
     category: "Interview",
     level: "Intermediate",
@@ -380,7 +380,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 111,
+    id: 21,
     title: "Asking Questions",
     category: "Interview",
     level: "Intermediate",
@@ -399,7 +399,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 112,
+    id: 22,
     title: "Remote Work",
     category: "Interview",
     level: "Intermediate",
@@ -418,7 +418,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 113,
+    id: 23,
     title: "Client Communication",
     category: "Interview",
     level: "Intermediate",
@@ -437,7 +437,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 114,
+    id: 24,
     title: "Attention To Detail",
     category: "Interview",
     level: "Intermediate",
@@ -456,7 +456,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 115,
+    id: 25,
     title: "Process Improvement",
     category: "Interview",
     level: "Intermediate",
@@ -475,7 +475,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 116,
+    id: 26,
     title: "Handling Deadlines",
     category: "Interview",
     level: "Intermediate",
@@ -494,7 +494,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 117,
+    id: 27,
     title: "Working Style",
     category: "Interview",
     level: "Intermediate",
@@ -513,7 +513,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 118,
+    id: 28,
     title: "Professional Values",
     category: "Interview",
     level: "Intermediate",
@@ -532,7 +532,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 119,
+    id: 29,
     title: "Salary Expectations",
     category: "Interview",
     level: "Intermediate",
@@ -551,7 +551,7 @@ export const interviewLessons = [
     ],
   },
   {
-    id: 120,
+    id: 30,
     title: "Availability",
     category: "Interview",
     level: "Intermediate",
@@ -559,6 +559,25 @@ export const interviewLessons = [
     sentences: [
       { en: "I would describe my approach to availability as practical, careful, and focused on long-term improvement.", jp: "私の入社可能時期への取り組み方は、実務的で慎重であり、長期的な改善を重視するものだと考えています。" },
       { en: "In a professional setting, availability requires not only knowledge but also communication and good judgment.", jp: "職場における入社可能時期には、知識だけでなく、コミュニケーション力と適切な判断力も必要です。" },
+      { en: "I try to understand the situation clearly before deciding how to respond.", jp: "どのように対応するかを決める前に、まず状況を明確に理解するようにしています。" },
+      { en: "This helps me avoid unnecessary mistakes and choose a solution that works in practice.", jp: "これにより、不要なミスを避け、実務上うまく機能する解決策を選ぶことができます。" },
+      { en: "When I am unsure about something, I prefer to ask early rather than make assumptions.", jp: "不明点がある場合は、思い込みで進めるのではなく、早めに確認するようにしています。" },
+      { en: "I believe this attitude is important because many workplace issues come from small misunderstandings.", jp: "職場での問題の多くは小さな誤解から生じるため、この姿勢は重要だと考えています。" },
+      { en: "I also try to learn from each experience so that I can handle similar situations better next time.", jp: "また、それぞれの経験から学び、次に似た状況が起きた時により良く対応できるようにしています。" },
+      { en: "Over time, this has helped me become more reliable and confident in my work.", jp: "時間をかけて、この姿勢は私がより信頼され、自信を持って仕事を進めることにつながりました。" },
+      { en: "I would like to bring this mindset to your team and continue improving through new challenges.", jp: "この考え方を御社のチームでも活かし、新しい課題を通じて成長し続けたいと考えています。" },
+      { en: "I believe that consistent effort and honest communication can create strong professional results.", jp: "継続的な努力と誠実なコミュニケーションが、良い仕事の成果につながると信じています。" },
+    ],
+  },
+  {
+    id: 31,
+    title: "Closing The Interview",
+    category: "Interview",
+    level: "Intermediate",
+    duration: "10 min",
+    sentences: [
+      { en: "I would describe my approach to closing interview as practical, careful, and focused on long-term improvement.", jp: "私の面接の締めくくりへの取り組み方は、実務的で慎重であり、長期的な改善を重視するものだと考えています。" },
+      { en: "In a professional setting, closing interview requires not only knowledge but also communication and good judgment.", jp: "職場における面接の締めくくりには、知識だけでなく、コミュニケーション力と適切な判断力も必要です。" },
       { en: "I try to understand the situation clearly before deciding how to respond.", jp: "どのように対応するかを決める前に、まず状況を明確に理解するようにしています。" },
       { en: "This helps me avoid unnecessary mistakes and choose a solution that works in practice.", jp: "これにより、不要なミスを避け、実務上うまく機能する解決策を選ぶことができます。" },
       { en: "When I am unsure about something, I prefer to ask early rather than make assumptions.", jp: "不明点がある場合は、思い込みで進めるのではなく、早めに確認するようにしています。" },

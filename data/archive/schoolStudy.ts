@@ -1,6 +1,6 @@
 export const schoolStudyLessons = [
   {
-    id: 1,
+    id: 1201,
     title: "Morning at School",
     category: "School / Study",
     level: "Beginner",
@@ -20,7 +20,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 2,
+    id: 1202,
     title: "Talking About Homework",
     category: "School / Study",
     level: "Beginner",
@@ -40,7 +40,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 3,
+    id: 1203,
     title: "Before a Test",
     category: "School / Study",
     level: "Beginner",
@@ -60,7 +60,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 4,
+    id: 1204,
     title: "After a Test",
     category: "School / Study",
     level: "Beginner",
@@ -80,7 +80,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 5,
+    id: 1205,
     title: "Studying English",
     category: "School / Study",
     level: "Beginner",
@@ -100,7 +100,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 6,
+    id: 1206,
     title: "Math Class",
     category: "School / Study",
     level: "Beginner",
@@ -120,7 +120,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 7,
+    id: 1207,
     title: "Science Class",
     category: "School / Study",
     level: "Beginner",
@@ -140,7 +140,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 8,
+    id: 1208,
     title: "Club Activities",
     category: "School / Study",
     level: "Beginner",
@@ -160,7 +160,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 9,
+    id: 1209,
     title: "Group Project",
     category: "School / Study",
     level: "Intermediate",
@@ -180,7 +180,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 10,
+    id: 1210,
     title: "Presentation Practice",
     category: "School / Study",
     level: "Intermediate",
@@ -200,7 +200,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 11,
+    id: 1211,
     title: "Asking the Teacher",
     category: "School / Study",
     level: "Beginner",
@@ -220,7 +220,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 12,
+    id: 1212,
     title: "Study Schedule",
     category: "School / Study",
     level: "Intermediate",
@@ -240,7 +240,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 13,
+    id: 1213,
     title: "Library Study",
     category: "School / Study",
     level: "Beginner",
@@ -260,7 +260,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 14,
+    id: 1214,
     title: "Online Class",
     category: "School / Study",
     level: "Beginner",
@@ -280,7 +280,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 15,
+    id: 1215,
     title: "Studying Abroad",
     category: "School / Study",
     level: "Intermediate",
@@ -300,7 +300,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 16,
+    id: 1216,
     title: "Entrance Exams",
     category: "School / Study",
     level: "Intermediate",
@@ -320,7 +320,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 17,
+    id: 1217,
     title: "English Speaking Practice",
     category: "School / Study",
     level: "Beginner",
@@ -340,7 +340,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 18,
+    id: 1218,
     title: "Taking Notes",
     category: "School / Study",
     level: "Beginner",
@@ -360,7 +360,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 19,
+    id: 1219,
     title: "Class Discussion",
     category: "School / Study",
     level: "Intermediate",
@@ -380,7 +380,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 20,
+    id: 1220,
     title: "School Lunch",
     category: "School / Study",
     level: "Beginner",
@@ -400,7 +400,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 21,
+    id: 1221,
     title: "Making Friends",
     category: "School / Study",
     level: "Beginner",
@@ -420,7 +420,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 22,
+    id: 1222,
     title: "Teacher Feedback",
     category: "School / Study",
     level: "Intermediate",
@@ -440,7 +440,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 23,
+    id: 1223,
     title: "Preparing for Class",
     category: "School / Study",
     level: "Beginner",
@@ -460,7 +460,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 24,
+    id: 1224,
     title: "Studying with Friends",
     category: "School / Study",
     level: "Beginner",
@@ -480,7 +480,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 25,
+    id: 1225,
     title: "School Event",
     category: "School / Study",
     level: "Beginner",
@@ -500,7 +500,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 26,
+    id: 1226,
     title: "Learning Vocabulary",
     category: "School / Study",
     level: "Beginner",
@@ -520,7 +520,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 27,
+    id: 1227,
     title: "Writing an Essay",
     category: "School / Study",
     level: "Intermediate",
@@ -540,7 +540,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 28,
+    id: 1228,
     title: "Exam Results",
     category: "School / Study",
     level: "Beginner",
@@ -560,7 +560,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 29,
+    id: 1229,
     title: "Future Goals",
     category: "School / Study",
     level: "Intermediate",
@@ -580,7 +580,7 @@ export const schoolStudyLessons = [
   },
 
   {
-    id: 30,
+    id: 1230,
     title: "Study Motivation",
     category: "School / Study",
     level: "Intermediate",
