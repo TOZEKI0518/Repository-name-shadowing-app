@@ -797,7 +797,7 @@ export default function Home() {
                   stopAudio();
                   setScreen("home");
                 }}
-                className="mt-3 h-16 w-full rounded-2xl bg-white font-black text-pink-500 shadow-lg"
+                className="mt-3 w-full rounded-2xl bg-white py-4 font-black text-pink-500 shadow-md"
               >
                 🏠 ホームへ戻る
               </button>
